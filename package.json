@@ -1,0 +1,26 @@
+{
+  "name": "fairassist",
+  "version": "0.0.1",
+  "license": "",
+  "repository": "",
+  "devDependencies": {
+    "standard": "*",
+    "jasmine": "*"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "*",
+    "angular": "1.7.8",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "angular-route": "1.7.8",
+    "requirejs": "*"
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/*"
+    ]
+  },
+  "scripts": {
+    "test": "standard"
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "coefSource": "https://www.reddit.com/r/classicwow/comments/95abc8/list_of_spellcoefficients_1121/",
+  "iconLocation": "styles/user_interface/ICONS/",
+  "spells": [
+    {
+      "name": "Renew",
+      "french": "Rénovation",
+      "icon": "Spell_Holy_Renew.png",
+      "coef": 1,
+      "castTime": 0,
+      "ranks": [
+        {
+          "rank": 1,
+          "flat": 45,
+          "cost": 30,
+          "level": 8
+        },
+        {
+          "rank": 2,
+          "flat": 100,
+          "cost": 65,
+          "level": 14
+        },
+        {
+          "rank": 3,
+          "flat": 175,
+          "cost": 105,
+          "level": 20
+        },
+        {
+          "rank": 4,
+          "flat": 245,
+          "cost": 140,
+          "level": 26
+        },
+        {
+          "rank": 5,
+          "flat": 315,
+          "cost": 170,
+          "level": 32
+        },
+        {
+          "rank": 6,
+          "flat": 400,
+          "cost": 205,
+          "level":38
+        },
+        {
+          "rank": 7,
+          "flat": 510,
+          "cost": 250,
+          "level": 44
+        },
+        {
+          "rank": 8,
+          "flat": 650,
+          "cost": 305,
+          "level": 50
+        },
+        {
+          "rank": 9,
+          "flat": 810,
+          "cost": 365,
+          "level": 56
+        }
+      ]
+    },
+    {
+      "name": "Heal",
+      "french": "Soins",
+      "icon": "Spell_Holy_Heal.png",
+      "coef": 0.8571,
+      "castTime": 3,
+      "ranks": [
+        {
+          "rank": 1,
+          "min":295,
+          "max":341,
+          "cost": 155,
+          "level": 16
+        },
+        {
+          "rank": 2,
+          "min":429,
+          "max":491,
+          "cost": 205,
+          "level": 22
+        },
+        {
+          "rank": 3,
+          "min": 566,
+          "max": 642,
+          "cost": 255,
+          "level": 28
+        },
+        {
+          "rank": 4,
+          "min":712,
+          "max":804,
+          "cost": 305,
+          "level": 34
+        }
+      ]
+    },
+    {
+      "name": "Lesser Heal",
+      "french": "Soins inférieurs",
+      "icon": "Spell_Holy_LesserHeal.png",
+      "coef": 0.7142,
+      "castTime": 2.5,
+      "ranks": [
+        {
+          "rank": 1,
+          "min":46,
+          "max":56,
+          "cost": 30,
+          "level": 1
+        },
+        {
+          "rank": 2,
+          "min":71,
+          "max":85,
+          "cost": 45,
+          "level": 4
+        },
+        {
+          "rank": 3,
+          "min": 135,
+          "max": 157,
+          "cost": 75,
+          "level": 10
+        }
+      ]
+    },
+    {
+      "name": "Greater Heal",
+      "french": "Soins supérieurs",
+      "icon": "Spell_Holy_GreaterHeal.png",
+      "castTime": 3,
+      "coef": 0.8571,
+      "ranks": [
+        {
+          "rank": 1,
+          "min":899,
+          "max":1013,
+          "cost": 370,
+          "level": 40
+        },
+        {
+          "rank": 2,
+          "min":1149,
+          "max":1289,
+          "cost": 455,
+          "level": 46
+        },
+        {
+          "rank": 3,
+          "min": 1437,
+          "max": 1609,
+          "cost": 545,
+          "level": 52
+        },
+        {
+          "rank": 4,
+          "min": 1798,
+          "max": 2006,
+          "cost": 655,
+          "level": 58
+        }
+      ]
+    },
+    {
+      "name": "Flash heal",
+      "french": "Soins rapides",
+      "icon": "Spell_Holy_FlashHeal.png",
+      "coef": 0.4285,
+      "castTime": 1.5,
+      "ranks": [
+        {
+          "rank": 1,
+          "min":193,
+          "max":237,
+          "cost": 125,
+          "level": 20
+        },
+        {
+          "rank": 2,
+          "min":258,
+          "max":314,
+          "cost": 155,
+          "level": 26
+        },
+        {
+          "rank": 3,
+          "min": 327,
+          "max": 393,
+          "cost": 185,
+          "level": 32
+        },
+        {
+          "rank": 4,
+          "min":400,
+          "max":478,
+          "cost": 215,
+          "level": 38
+        },
+        {
+          "rank": 5,
+          "min":518,
+          "max":616,
+          "cost": 265,
+          "level": 44
+        },
+        {
+          "rank": 6,
+          "min": 644,
+          "max": 764,
+          "cost": 315,
+          "level": 50
+        },
+        {
+          "rank": 7,
+          "min": 812,
+          "max": 958,
+          "cost": 380,
+          "level": 56
+        }
+      ]
+    },
+    {
+      "name": "Prayer of Healing",
+      "french": "Prière de soins",
+      "icon": "Spell_Holy_PrayerOfHealing02.png",
+      "coef": 0.2857,
+      "castTime": 3,
+      "ranks": [
+        {
+          "rank": 1,
+          "min":301,
+          "max":321,
+          "cost": 410,
+          "level": 30
+        },
+        {
+          "rank": 2,
+          "min":444,
+          "max":472,
+          "cost": 560,
+          "level": 40
+        },
+        {
+          "rank": 3,
+          "min":657,
+          "max":695,
+          "cost": 770,
+          "level": 50
+        },
+        {
+          "rank": 4,
+          "min":939,
+          "max":991,
+          "cost": 1030,
+          "level": 60
+        }
+      ]
+    },
+    {
+      "name": "Holy nova",
+      "french": "Nova sacrée",
+      "icon": "Spell_Holy_HolyNova.png",
+      "coef": 0.714,
+      "castTime": 3,
+      "ranks": [
+        {
+          "rank": 1,
+          "min":50,
+          "max":63,
+          "cost": 185,
+          "level": 20
+        },
+        {
+          "rank": 2,
+          "min":86,
+          "max":98,
+          "cost": 290,
+          "level":28
+        },
+        {
+          "rank": 3,
+          "min":121,
+          "max":139,
+          "cost": 400,
+          "level":36
+        },
+        {
+          "rank": 4,
+          "min":161,
+          "max":187,
+          "cost": 520,
+          "level":44
+        },
+        {
+          "rank": 5,
+          "min":235,
+          "max":271,
+          "cost": 635,
+          "level":52
+        },
+        {
+          "rank": 6,
+          "min":302,
+          "max":350,
+          "cost": 750,
+          "level":52
+        }
+      ]
+    },
+    {
+      "name": "Power word: Shield",
+      "french": "Mot de pouvoir : bouclier",
+      "icon": "Spell_Holy_PowerWordShield.png",
+      "coef": 0.1,
+      "castTime": 0,
+      "ranks": [
+        {
+          "rank": 1,
+          "flat": 44,
+          "cost": 45,
+          "level": 6
+        },
+        {
+          "rank": 2,
+          "flat": 88,
+          "cost": 80,
+          "level": 12
+        },
+        {
+          "rank": 3,
+          "flat": 158,
+          "cost": 130,
+          "level": 18
+        },
+        {
+          "rank": 4,
+          "flat": 234,
+          "cost": 175,
+          "level": 24
+        },
+        {
+          "rank": 5,
+          "flat": 301,
+          "cost": 210,
+          "level": 30
+        },
+        {
+          "rank": 6,
+          "flat": 381,
+          "cost": 250,
+          "level": 36
+        },
+        {
+          "rank": 7,
+          "flat": 484,
+          "cost": 300,
+          "level": 42
+        },
+        {
+          "rank": 8,
+          "flat": 605,
+          "cost": 355,
+          "level": 48
+        },
+        {
+          "rank": 9,
+          "flat": 763,
+          "cost": 425,
+          "level": 54
+        },
+        {
+          "rank": 10,
+          "flat": 942,
+          "cost": 500,
+          "level": 60
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "Improved power word shield",
+    "Sagacité",
+    "Improved Renew",
+    "Furreur divine",
+    "Improved Healing",
+    "Improved Prayer of Healing",
+    "Soins spirituels",
+    "Direction spirituelle"
+  ]
+}

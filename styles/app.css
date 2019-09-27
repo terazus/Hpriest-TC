@@ -1,0 +1,307 @@
+/* GENERAL */
+
+body{
+    font-family: "Lato", sans-serif !important;
+    font-size:14px;
+}
+
+h1, h2, h3{
+    text-align: center;
+    margin-top:10px;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 2.0em;
+    color: #3B5169;
+    margin: 30px 0;
+}
+
+h3{
+    font-size: 2.0em;
+    color: #27aae1;
+    font-weight: 100;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.4em;
+    color: #333;
+    margin: 20px 0;
+    padding:10px 20px;
+    font-family: "Lato", sans-serif !important;
+    text-align: justify;
+}
+
+hr {
+    border:0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 1), rgba(0, 0, 0, 0)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -moz-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 1), rgba(0, 0, 0, 0)); /* For Firefox (3.6 to 15) */
+    background-image: -o-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 1), rgba(0, 0, 0, 0)); /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 1), rgba(0, 0, 0, 0)); /* Standard syntax; must be last */
+    margin:30px 0;
+}
+
+.blue-bg hr{
+    background-image: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* For Firefox (3.6 to 15) */
+    background-image: -o-linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Standard syntax; must be last */
+}
+
+hr.mediumHR {
+    width:70%;
+}
+
+/* NAV BAR */
+
+nav.navTop{
+    background-color: #ECF0F1 !important;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+a.navbar-brand {
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* MAIN CONTAINER */
+
+.main {
+    padding:20px;
+}
+
+@media (max-width: 900px) {
+    .main {
+       padding:10px 0;
+    }
+}
+
+/* COLORS */
+.blue{
+    color:#36A9E1;;
+}
+
+.black{
+    color:initial;
+}
+
+.green {
+    color:green;
+}
+
+.red {
+    color: red;
+}
+
+.blue-bg {
+    background-color:#8dbdd8 !important;
+    color:white;
+}
+
+.blue-text{
+    color:#8dbdd8 !important;
+}
+
+table li {
+    list-style: none;
+}
+
+/* TABLE */
+table {
+    margin-top: 30px;
+    table-layout: auto;
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+table, button {
+    box-shadow: 3px 3px 3px rgba(0,0,0, 0.5)
+}
+
+table.table-light thead th {
+    border:0;
+    color:white;
+    text-align:center;
+    font-size:1.3rem;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+table.table-light thead th:hover{
+    cursor: pointer;
+}
+
+table tr td {
+    font-size:1.1rem;
+    padding:20px !important;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+table tr td.Key-features{
+    text-align: left;
+    padding: 10px 30px;
+}
+
+.borderLeftCell{
+    border-left:1px solid white !important;
+}
+
+.borderRightCell{
+    border-right:1px solid white !important;
+}
+
+/* GRid */
+#toolGrid {
+    margin-top: 20px;
+    font-size:1.3em;
+    font-weight: 300;
+}
+
+#toolGrid.container-fluid{
+    padding:0;
+}
+
+#toolGrid .row {
+    margin:0;
+}
+
+#toolGrid .tool{
+    padding:40px 30px;
+    word-break: break-word;
+}
+
+#toolGrid div.field{
+    display: block;
+}
+
+#toolGrid div.field span.label{
+    font-weight: bolder;
+}
+
+#toolGrid .fieldLabel{
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#toolGrid .fieldValue{
+    display: inline-block;
+    white-space: pre-line;
+}
+
+#toolGrid .showResource{
+    font-size: 1rem;
+    margin-left:10px;
+    top:-10px;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
+}
+
+#toolGrid .showResource:hover{
+    cursor: pointer;
+}
+
+#toolGrid a{
+    color:initial;
+}
+
+#toolGrid .blue-bg a{
+    color:white;
+}
+
+span.label{
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+#toolGrid .field{
+    padding:0 20px;
+}
+
+#toolGrid .featuresItems{
+    padding-left:40px;
+}
+
+
+/* GOOGLE FORM INTEGRATION */
+.formOverlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 30px;
+    z-index: 2;
+}
+
+@media (min-width: 1200px) {
+    .formOverlay {
+        padding: 50px 300px;
+    }
+}
+
+.formOverlay .googleFormContainer {
+    border:1px solid #ccc;
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    padding:20px;
+    background-color:white;
+    overflow-y: hidden;
+}
+
+.formOverlay .googleFormContainer  .closeBtn {
+    text-align:right;
+}
+
+.formOverlay .googleFormContainer  .closeBtn button{
+    padding:10px 20px;
+}
+
+.openGForm .getFormContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openGForm .getFormContainer button:not(.noSkin) {
+    margin: 20px 0;
+    padding: 15px 30px;
+    border-radius:0;
+    background-color:#36A9E1;
+    font-size:1.5rem;
+}
+
+.getFormContainer button.blue-bg:hover{
+    color:white;
+    background: #7097ac !important;
+}
+
+.getFormContainer button.blue-bg:focus{
+    background-color: #547181 !important;
+}
+
+.trimText {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sorter {
+    font-size:1.1rem;
+    margin-left:10px;
+}
+
+
+.footer, .footer *{
+    text-align: center;
+}
+
+.license {
+    margin-top:15px;
+    margin-bottom:30px;
+}

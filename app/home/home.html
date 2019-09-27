@@ -1,0 +1,89 @@
+<div class="titleBlock" ng-controller="dataController">
+
+    <h2>Help you analyze your healing spells efficiency.</h2>
+
+    <p>
+        <form>
+            <label>Spell Power: </label> <br>
+            <input ng-model="spellPower">
+
+        </form>
+    </p>
+
+    <table class="table table-hover table-light table-striped">
+        <thead>
+            <tr>
+                <th ng-repeat="label in labels" class="blue-bg">
+                    {{label}}
+                </th>
+                <th class="blue-bg">
+                    Coefficients
+                </th>
+            </tr>
+        </thead>
+
+        <tbody ng-repeat="spell in data['spells']">
+
+            <tr ng-repeat="rank in spell['ranks']">
+                <td>
+                    <img ng-if="spell.hasOwnProperty('icon')"
+                         src="{{data['iconLocation']}}{{spell['icon']}}"
+                         class="spellIcon">
+                </td>
+                <td>
+                    <span ng-class="{'red': rank['level'] <= 20}">{{spell.name}} ({{rank['level']}}) </span>
+                </td>
+                <td>
+                    {{spell['coef']}}
+                </td>
+                <td>
+                    {{spell['castTime']}}
+                </td>
+
+                <td>
+                    {{rank['rank']}}
+                </td>
+
+                <!-- Values -->
+                <td>
+                    <span ng-if="rank.hasOwnProperty('min')">{{rank['min']}}</span>
+                    <span ng-if="!rank.hasOwnProperty('min')"> - </span>
+                </td>
+                <td>
+                    <span ng-if="rank.hasOwnProperty('max')">{{rank['max']}}</span>
+                    <span ng-if="!rank.hasOwnProperty('max')"> - </span>
+                </td>
+                <td>
+                    {{rank['flat']}}
+                    <br>
+                    {{rank['flat'] + (rank['effectiveCoefficient'] * spellPower)}}
+                </td>
+                <td>
+                    {{rank['cost']}}
+                </td>
+
+                <!-- HPM -->
+                <td>
+                    {{rank['HPM']}}
+                    <br>
+                    <b class="green">
+                        {{(rank['flat'] + (rank['effectiveCoefficient'] * spellPower))  / rank['cost'] }}
+                    </b>
+                </td>
+
+                <!-- COEFFICIENTS -->
+                <td>
+                    <ul>
+                        <li>Rank penalty: {{rank['rankPenalty']}} </li>
+                        <li>Spell cast coefficient: {{rank['castCoefficient']}}</li>
+                        <li>Full Coefficient: {{rank['effectiveCoefficient']}}</li>
+                    </ul>
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

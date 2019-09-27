@@ -15,7 +15,7 @@ define([], function () {
         }
 
         // Setting X labels
-        for (let i=0;i<=1000;i++){
+        for (let i=0;i<=1000;i+=10){
           $scope.graphs.labels.push(i)
         }
 
@@ -45,6 +45,9 @@ define([], function () {
             };
 
             for (let spellIt in response.data['spells']){
+
+                let currentSpell = response.data['spells'][spellIt]
+
                 if (response.data['spells'].hasOwnProperty(spellIt)){
                     let spell = response.data['spells'][spellIt];
 
@@ -85,25 +88,27 @@ define([], function () {
                     output['spells'].push(spell);
                 }
 
-                if (response.data['spells'][spellIt]['name'] === "Greater Heal"){
+                $scope.graphs[currentSpell.name] = {
+                  'series': [],
+                  'data': []
+                }
 
-                  // Setting series
-                  let rankIndex = 0
-                  for (let rank in response.data['spells'][spellIt]['ranks']){
-                      $scope.graphs['Greater Heal'].series.push("RANK " + response.data['spells'][spellIt]['ranks'][rank]['rank'])
+                // Setting series
+                let rankIndex = 0;
+                for (let rank in response.data['spells'][spellIt]['ranks']){
+                    $scope.graphs[currentSpell.name].series.push("RANK " + response.data['spells'][spellIt]['ranks'][rank]['rank'])
 
-                      let rankValues = []
-                      // Setting up data
-                      for (let i=0;i<=1000;i++){
-                          let HPM = $scope.computeHPM(i, response.data['spells'][spellIt], rankIndex)
-                          rankValues.push(HPM);
-                      }
-                      $scope.graphs['Greater Heal'].data.push(rankValues);
-                      rankIndex ++;
-
-                  }
+                    let rankValues = []
+                    // Setting up data
+                    for (let i=0;i<=1000;i+=10){
+                        let HPM = $scope.computeHPSM(i, response.data['spells'][spellIt], rankIndex)
+                        rankValues.push(HPM);
+                    }
+                    $scope.graphs[currentSpell.name].data.push(rankValues);
+                    rankIndex ++;
 
                 }
+                console.log($scope.graphs);
             }
 
             $scope.data = output;

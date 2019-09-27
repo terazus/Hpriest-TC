@@ -69,6 +69,10 @@
                     <b class="green">
                         {{(rank['flat'] + (rank['effectiveCoefficient'] * spellPower))  / rank['cost'] }}
                     </b>
+                    <br>
+                    <b class="red">
+                        {{((rank['flat'] + (rank['effectiveCoefficient'] * spellPower))  / spell['effectiveCastTime']) / rank['cost'] }}
+                    </b>
                 </td>
 
                 <!-- COEFFICIENTS -->

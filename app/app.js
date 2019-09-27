@@ -5,7 +5,7 @@
 
 define(['angular', 'home/dataCtrl'], function (angular, controller) {
 
-    let app = angular.module("HealerHPM", ['ngRoute']);
+    let app = angular.module("HealerHPM", ['ngRoute', 'chart.js']);
 
     app.controller('dataController', controller);
 

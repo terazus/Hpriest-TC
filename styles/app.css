@@ -145,6 +145,18 @@ table tr td.Key-features{
     padding: 10px 30px;
 }
 
+table .icon{
+    width: 70px;
+}
+
+table .Name{
+    width: 150px;
+}
+
+table .spellIcon{
+    max-width: 40px;
+}
+
 .borderLeftCell{
     border-left:1px solid white !important;
 }

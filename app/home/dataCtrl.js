@@ -6,6 +6,37 @@ define([], function () {
             url: data_file
         };
 
+        $scope.graphs = {
+          "Greater Heal": {
+            'series': [],
+            'data': []
+          },
+          "labels" : []
+        }
+
+        // Setting X labels
+        for (let i=0;i<=1000;i++){
+          $scope.graphs.labels.push(i)
+        }
+
+        $scope.onClick = function (points, evt) {
+          console.log(points, evt);
+        };
+        $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }];
+        $scope.options = {
+        scales: {
+          yAxes: [
+            {
+              id: 'y-axis-1',
+              type: 'linear',
+              display: true,
+              position: 'left'
+            }
+          ]
+        }
+      };
+
+
         $http(request).then(function(response){
 
             let output = {
@@ -53,11 +84,47 @@ define([], function () {
 
                     output['spells'].push(spell);
                 }
+
+                if (response.data['spells'][spellIt]['name'] === "Greater Heal"){
+
+                  // Setting series
+                  let rankIndex = 0
+                  for (let rank in response.data['spells'][spellIt]['ranks']){
+                      $scope.graphs['Greater Heal'].series.push("RANK " + response.data['spells'][spellIt]['ranks'][rank]['rank'])
+
+                      let rankValues = []
+                      // Setting up data
+                      for (let i=0;i<=1000;i++){
+                          let HPM = $scope.computeHPM(i, response.data['spells'][spellIt], rankIndex)
+                          rankValues.push(HPM);
+                      }
+                      $scope.graphs['Greater Heal'].data.push(rankValues);
+                      rankIndex ++;
+
+                  }
+
+                }
             }
 
             $scope.data = output;
-        })
+        });
+
+        $scope.computeHPM = function(spellPower, spell, rank){
+            let rankValue = spell['ranks'][rank];
+            return (rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / rankValue['cost']
+        }
+
+        $scope.computeHPSM = function(spellPower, spell, rank){
+            let rankValue = spell['ranks'][rank];
+            return ((rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / spell['effectiveCastTime'] ) / rankValue['cost']
+        }
+
+
+
+
     };
+
+
 
     dataController.$inject = ['$scope', '$http'];
 

@@ -4,14 +4,13 @@ define(['app'], function (app) {
         $scope.labels = [
             "icon",
             "Name",
-            "Efficiency",
             "Cast time",
             "Rank",
-            "Minimum Heal",
-            "Maximum Heal",
+            "Min",
+            "Max",
             "Flat Heal",
             "Cost",
-            "Heal Per Mana"
+            "Efficiency"
         ];
 
         $scope.spellPower = "1"

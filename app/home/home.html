@@ -13,7 +13,7 @@
     <table class="table table-hover table-light table-striped">
         <thead>
             <tr>
-                <th ng-repeat="label in labels" class="blue-bg">
+                <th ng-repeat="label in labels" class="blue-bg" ng-class="label">
                     {{label}}
                 </th>
                 <th class="blue-bg">
@@ -33,9 +33,9 @@
                 <td>
                     <span ng-class="{'red': rank['level'] <= 20}">{{spell.name}} ({{rank['level']}}) </span>
                 </td>
-                <td>
+                <!--<td>
                     {{spell['coef']}}
-                </td>
+                </td>-->
                 <td>
                     {{spell['castTime']}}
                 </td>
@@ -64,14 +64,14 @@
 
                 <!-- HPM -->
                 <td>
-                    {{rank['HPM']}}
+                    <span style="font-size: 10px">{{rank['HPM']}} HPM</span>
                     <br>
                     <b class="green">
-                        {{(rank['flat'] + (rank['effectiveCoefficient'] * spellPower))  / rank['cost'] }}
+                        {{computeHPM(spellPower, spell, $index)}} HPM
                     </b>
                     <br>
                     <b class="red">
-                        {{((rank['flat'] + (rank['effectiveCoefficient'] * spellPower))  / spell['effectiveCastTime']) / rank['cost'] }}
+                        {{computeHPSM(spellPower, spell, $index)}} HPS/M
                     </b>
                 </td>
 
@@ -89,5 +89,11 @@
         </tbody>
 
     </table>
+
+    <h3>Greater Heal Graph</h3>
+    <canvas id="line" class="chart chart-line" chart-data="graphs['Greater Heal'].data"
+            chart-labels="graphs.labels" chart-series="graphs['Greater Heal'].series" chart-options="options"
+            chart-click="onClick">
+    </canvas>
 
 </div>

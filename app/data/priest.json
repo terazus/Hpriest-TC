@@ -1,11 +1,11 @@
 {
   "coefSource": "https://www.reddit.com/r/classicwow/comments/95abc8/list_of_spellcoefficients_1121/",
-  "iconLocation": "styles/user_interface/ICONS/",
+  "iconLocation": "https://wow.zamimg.com/images/wow/icons/large/",
   "spells": [
     {
       "name": "Renew",
       "french": "Rénovation",
-      "icon": "Spell_Holy_Renew.png",
+      "icon": "spell_holy_renew.jpg",
       "coef": 1,
       "castTime": 0,
       "ranks": [
@@ -68,7 +68,7 @@
     {
       "name": "Heal",
       "french": "Soins",
-      "icon": "Spell_Holy_Heal.png",
+      "icon": "spell_holy_heal.jpg",
       "coef": 0.8571,
       "castTime": 3,
       "ranks": [
@@ -105,7 +105,7 @@
     {
       "name": "Lesser Heal",
       "french": "Soins inférieurs",
-      "icon": "Spell_Holy_LesserHeal.png",
+      "icon": "spell_holy_lesserheal.jpg",
       "coef": 0.7142,
       "castTime": 2.5,
       "ranks": [
@@ -135,7 +135,7 @@
     {
       "name": "Greater Heal",
       "french": "Soins supérieurs",
-      "icon": "Spell_Holy_GreaterHeal.png",
+      "icon": "spell_holy_greaterheal.jpg",
       "castTime": 3,
       "coef": 0.8571,
       "ranks": [
@@ -172,7 +172,7 @@
     {
       "name": "Flash heal",
       "french": "Soins rapides",
-      "icon": "Spell_Holy_FlashHeal.png",
+      "icon": "spell_holy_flashheal.jpg",
       "coef": 0.4285,
       "castTime": 1.5,
       "ranks": [
@@ -230,7 +230,7 @@
     {
       "name": "Prayer of Healing",
       "french": "Prière de soins",
-      "icon": "Spell_Holy_PrayerOfHealing02.png",
+      "icon": "spell_holy_prayerofhealing02.jpg",
       "coef": 0.2857,
       "castTime": 3,
       "ranks": [
@@ -267,7 +267,7 @@
     {
       "name": "Holy nova",
       "french": "Nova sacrée",
-      "icon": "Spell_Holy_HolyNova.png",
+      "icon": "spell_holy_holynova.jpg",
       "coef": 0.714,
       "castTime": 3,
       "ranks": [
@@ -318,7 +318,7 @@
     {
       "name": "Power word: Shield",
       "french": "Mot de pouvoir : bouclier",
-      "icon": "Spell_Holy_PowerWordShield.png",
+      "icon": "spell_holy_powerwordshield.jpg",
       "coef": 0.1,
       "castTime": 0,
       "ranks": [

@@ -1,0 +1,24 @@
+<div ng-controller="dataController">
+
+    <h3> Graphs </h3>
+
+    <div ng-controller="graphsController">
+        {{test}}
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-4" ng-repeat="(spellName, spellVal) in graphs" ng-if="spellName !== 'labels' ">
+                <h3>{{spellName}}</h3>
+                <canvas id="line"
+                        class="chart chart-line"
+                        chart-data="spellVal.data"
+                        chart-labels="graphs.labels"
+                        chart-series="spellVal.series"
+                        chart-options="options"
+                        chart-click="onClick">
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>

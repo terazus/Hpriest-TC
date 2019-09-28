@@ -1,18 +1,19 @@
-/*define(['angular', 'home/testCtrl'], function (angular,controller) {
-    angular.module('app',[])
-        .controller('myController', controller);
-});*/
+let dependencies = [
+    'angular',
+    'home/dataCtrl',
+    'graphs/graphsCtrl'
+];
 
-define(['angular', 'home/dataCtrl'], function (angular, controller) {
+define(dependencies, function (angular, dataCtrl, graphsCtrl) {
 
     let app = angular.module("HealerHPM", ['ngRoute', 'chart.js']);
 
-    app.controller('dataController', controller);
+    app.controller('dataController', dataCtrl);
+    app.controller('graphsController', graphsCtrl);
 
     app.config(['$routeProvider', '$controllerProvider', '$provide', function ($routeProvider,
                                                                                $controllerProvider,
                                                                                $provide) {
-
         app.register = {
             controller: $controllerProvider.register,
             factory: $provide.factory
@@ -37,6 +38,9 @@ define(['angular', 'home/dataCtrl'], function (angular, controller) {
                 controller: "HomeController",
                 resolve: resolveController(["HomeController"])
             })
+            .when("/graphs", {
+                templateUrl: "app/graphs/graphs.html"
+            })
             .otherwise({redirectTo: '/'});
     }]);
 
@@ -48,13 +52,6 @@ define(['angular', 'home/dataCtrl'], function (angular, controller) {
         return{
             restrict: 'A',
             templateUrl: 'app/navigation/navBar.html',
-        }
-    });
-
-    app.directive('googleForm', function(){
-        return{
-            restrict: 'A',
-            templateUrl: 'app/home/googleForm.html',
         }
     });
 

@@ -12,7 +12,7 @@ define([], function () {
             'data': []
           },
           "labels" : []
-        }
+        };
 
         // Setting X labels
         for (let i=0;i<=1000;i+=10){
@@ -91,7 +91,7 @@ define([], function () {
                 $scope.graphs[currentSpell.name] = {
                   'series': [],
                   'data': []
-                }
+                };
 
                 // Setting series
                 let rankIndex = 0;
@@ -117,7 +117,7 @@ define([], function () {
         $scope.computeHPM = function(spellPower, spell, rank){
             let rankValue = spell['ranks'][rank];
             return (rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / rankValue['cost']
-        }
+        };
 
         $scope.computeHPSM = function(spellPower, spell, rank){
             let rankValue = spell['ranks'][rank];

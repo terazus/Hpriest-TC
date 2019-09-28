@@ -66,6 +66,12 @@ a.navbar-brand {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
+a.nav-link {
+    font-size:20px;
+    color: #27aae1 !important;
+    margin-left:20px;
+}
+
 /* MAIN CONTAINER */
 
 .main {

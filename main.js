@@ -8,19 +8,25 @@ require.config({
         'chart': '../node_modules/chart.js/dist/Chart.min',
         'angular-chart': '../node_modules/angular-chart.js/dist/angular-chart.min',
         'jquery': '../node_modules/jquery/dist/jquery',
-        'bootstrap': '../node_modules/bootstrap/dist/js/bootstrap.min',
+        'bootstrap': '../node_modules/bootstrap/dist/js/bootstrap.bundle',
         'HomeController': 'home/homeCtrl',
         'app': 'app'
     },
 
     // Dependencies
     shim: {
-        'app': ['angular-route', 'angular-chart'],
+        'app': ['angular-route', 'angular-chart', 'bootstrap'],
         'angular-chart': ['angular', 'chart'],
         'chart': ['angular'],
-        'angular-route': ['angular'],
+        'bootstrap': ['jquery'],
+        'angular-route': {
+            deps: ['angular']
+        },
         'angular': {
             exports: 'angular'
+        },
+        'jquery': {
+            exports: '$'
         }
     },
 

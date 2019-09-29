@@ -287,6 +287,15 @@ label.graphParam{
     margin-right:10px;
 }
 
+.graphContainer{
+    padding: 10px;
+}
+
+.graph{
+    border:1px solid #ccc;
+    box-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
+
+}
 
 
 /* FOOTER */

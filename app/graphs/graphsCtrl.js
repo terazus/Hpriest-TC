@@ -31,6 +31,11 @@ define([], function () {
                         position: 'left'
                     }
                 ]
+            },
+            elements: {
+                line: {
+                    fill: false
+                }
             }
         };
 

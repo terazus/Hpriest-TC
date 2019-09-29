@@ -39,18 +39,19 @@
         <div class="spellGraphZone col-lg-9 col-md-9 col-sm-12">
             <div class="container-fluid" ng-if="spell_selected">
                 <div class="row">
-                    <div class="col-12"
+                    <div class="col-lg-6 col-md-12 col-sm-12 graphContainer"
                          ng-repeat="(spellName, spellVal) in graphs.data">
-                        <h4>{{spellName}}</h4>
-                        <canvas id="line"
-                                class="chart chart-line"
-                                chart-data="spellVal"
-                                chart-labels="graphs.labels"
-                                chart-series="graphs.series"
-                                chart-options="options"
-                                chart-click="onClick">
-                        </canvas>
-
+                        <div class="graph">
+                            <h4>{{spellName}}</h4>
+                            <canvas id="line"
+                                    class="chart chart-line"
+                                    chart-data="spellVal"
+                                    chart-labels="graphs.labels"
+                                    chart-series="graphs.series"
+                                    chart-options="options"
+                                    chart-click="onClick">
+                            </canvas>
+                        </div>
                     </div>
                 </div>
             </div>

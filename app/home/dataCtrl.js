@@ -83,7 +83,7 @@ define([], function () {
             let HPM = $scope.computeHPM(spellPower, spell, rank);
             let HPS = $scope.computeHPS(spellPower, spell, rank);
 
-            return Math.pow(HPM, coefficient[0]) * Math.pow(Math.log10(HPS), coefficient[1]);
+            return Math.pow(HPM, coefficient[0]) * Math.pow(Math.log(HPS), coefficient[1]);
         }
 
 

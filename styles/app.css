@@ -33,6 +33,11 @@ p {
     text-align: justify;
 }
 
+.paddedSide {
+    padding-left:20px !important;
+    padding-right:20px !important;
+}
+
 hr {
     border:0;
     height: 1px;
@@ -244,75 +249,47 @@ span.label{
 }
 
 
-/* GOOGLE FORM INTEGRATION */
-.formOverlay {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px 30px;
-    z-index: 2;
-}
-
-@media (min-width: 1200px) {
-    .formOverlay {
-        padding: 50px 300px;
-    }
-}
-
-.formOverlay .googleFormContainer {
+/* GRAPH */
+.graphMainContainer {
     border:1px solid #ccc;
-    width:100%;
-    height:100%;
-    border-radius:10px;
-    padding:20px;
-    background-color:white;
-    overflow-y: hidden;
+    box-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
 }
 
-.formOverlay .googleFormContainer  .closeBtn {
-    text-align:right;
-}
-
-.formOverlay .googleFormContainer  .closeBtn button{
-    padding:10px 20px;
-}
-
-.openGForm .getFormContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.openGForm .getFormContainer button:not(.noSkin) {
-    margin: 20px 0;
-    padding: 15px 30px;
-    border-radius:0;
-    background-color:#36A9E1;
-    font-size:1.5rem;
-}
-
-.getFormContainer button.blue-bg:hover{
+.graphMainContainer h3{
+    border-bottom:1px solid #ccc;
+    background-color: #36A9E1;
     color:white;
-    background: #7097ac !important;
+    text-shadow:3px 3px 3px rgba(0,0,0, 0.5);
+    margin: 0 0 10px 0;
+    padding: 20px 0;
+    font-weight: bolder;
 }
 
-.getFormContainer button.blue-bg:focus{
-    background-color: #547181 !important;
+.spellSelector {
+    border:1px solid #ccc;
+    box-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
+    height:100%;
+    padding: 20px;
+    margin-bottom:20px;
 }
 
-.trimText {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.sorter {
-    font-size:1.1rem;
+.spellSelector .spellIcon{
     margin-left:10px;
+    margin-bottom:10px;
+    cursor: pointer;
 }
+
+.selectedSpell {
+    border:2px solid red;
+}
+
+label.graphParam{
+    margin-right:10px;
+}
+
+
+
+/* FOOTER */
 
 
 .footer, .footer *{

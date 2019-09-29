@@ -1,24 +1,66 @@
-<div ng-controller="dataController">
+<div ng-controller="dataController"
+     class="container-fluid graphMainContainer" style="border:1px solid #ccc">
 
-    <h3> Graphs </h3>
+    <div class="row">
+        <h3 class="col-12"> Graphs </h3>
+    </div>
 
-    <div ng-controller="graphsController">
-        {{test}}
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col-4" ng-repeat="(spellName, spellVal) in graphs" ng-if="spellName !== 'labels' ">
-                <h3>{{spellName}}</h3>
-                <canvas id="line"
-                        class="chart chart-line"
-                        chart-data="spellVal.data"
-                        chart-labels="graphs.labels"
-                        chart-series="spellVal.series"
-                        chart-options="options"
-                        chart-click="onClick">
-                </canvas>
+    <div class="row paddedSide" ng-controller="graphsController">
+
+        <div class="spellSelector col-lg-3 col-md-3 col-sm-12">
+            <h5>Select a spell: </h5>
+            <div class="">
+                <img  ng-repeat="spell in data['spells']"
+                      ng-if="spell.hasOwnProperty('icon')"
+                      src="{{data['iconLocation']}}{{spell['icon']}}"
+                      class="spellIcon"
+                      ng-click="computeGraph(spell)"
+                      ng-class="{'selectedSpell': spell.name === spell_selected.name}">
+            </div>
+
+            <hr>
+
+            <div>
+                <h5> Graph options</h5>
+                <label class="graphParam">Min</label>
+                <input ng-model="graphParam.min" type="number">
+                <br>
+                <label class="graphParam">Max</label>
+                <input ng-model="graphParam.max" type="number">
+                <br>
+                <label class="graphParam">Step</label>
+                <input ng-model="graphParam.step" type="number">
+                <br>
+                <button ng-click="computeGraph(spell_selected)">Recompute</button>
             </div>
         </div>
-    </div>
+
+
+        <div class="spellGraphZone col-lg-9 col-md-9 col-sm-12">
+            <div class="container-fluid" ng-if="spell_selected">
+                <div class="row">
+                    <div class="col-12"
+                         ng-repeat="(spellName, spellVal) in graphs.data">
+                        <h4>{{spellName}}</h4>
+                        <canvas id="line"
+                                class="chart chart-line"
+                                chart-data="spellVal"
+                                chart-labels="graphs.labels"
+                                chart-series="graphs.series"
+                                chart-options="options"
+                                chart-click="onClick">
+                        </canvas>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
 
     </div>
+
+
+
+
 </div>

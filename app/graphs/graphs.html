@@ -8,32 +8,59 @@
     <div class="row paddedSide" ng-controller="graphsController">
 
         <div class="spellSelector col-lg-3 col-md-3 col-sm-12">
-            <h5>Select a spell: </h5>
             <div class="">
-                <img  ng-repeat="spell in data['spells']"
-                      ng-if="spell.hasOwnProperty('icon')"
-                      src="{{data['iconLocation']}}{{spell['icon']}}"
-                      class="spellIcon"
-                      ng-click="computeGraph(spell)"
-                      ng-class="{'selectedSpell': spell.name === spell_selected.name}">
+                <h5>Select a spell: </h5>
+                <div class="">
+                    <img  ng-repeat="spell in data['spells']"
+                          ng-if="spell.hasOwnProperty('icon')"
+                          src="{{data['iconLocation']}}{{spell['icon']}}"
+                          class="spellIcon"
+                          ng-click="computeGraph(spell)"
+                          ng-class="{'selectedSpell': spell.name === spell_selected.name}">
+                </div>
+
+                <hr>
+
+                <div>
+                    <h5> Graph options</h5>
+                    <label class="graphParam">Min</label>
+                    <input ng-model="graphParam.min" type="number">
+                    <br>
+                    <label class="graphParam">Max</label>
+                    <input ng-model="graphParam.max" type="number">
+                    <br>
+                    <label class="graphParam">Step</label>
+                    <input ng-model="graphParam.step" type="number">
+                    <br>
+                    <button ng-click="computeGraph(spell_selected)">Recompute</button>
+                </div>
             </div>
 
-            <hr>
+            <div ng-if="spell_selected === 0">
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Cost</th>
+                        <th>Heal produced</th>
+                        <th>HPS</th>
+                        <th>HPM</th>
+                    </tr>
 
-            <div>
-                <h5> Graph options</h5>
-                <label class="graphParam">Min</label>
-                <input ng-model="graphParam.min" type="number">
-                <br>
-                <label class="graphParam">Max</label>
-                <input ng-model="graphParam.max" type="number">
-                <br>
-                <label class="graphParam">Step</label>
-                <input ng-model="graphParam.step" type="number">
-                <br>
-                <button ng-click="computeGraph(spell_selected)">Recompute</button>
+                    <tbody>
+                        <tr ng-repeat="rank in spell_selected.ranks">
+                            <td>{{rank.rank}}</td>
+                            <td>{{rank.cost}}</td>
+                            <td>{{rank.flat}}</td>
+                            <td>{{computeHPS(0, spell_selected, $index)}}</td>
+                            <td>{{rank.HPM}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {{spell_selected}}
             </div>
         </div>
+
+
 
 
         <div class="spellGraphZone col-lg-9 col-md-9 col-sm-12">

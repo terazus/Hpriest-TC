@@ -76,6 +76,7 @@ define([], function () {
 
         $scope.computeHPS = function(spellPower, spell, rank){
             let rankValue = spell['ranks'][rank];
+            console.log(spell['ranks'][rank]);
             return ((rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / spell['effectiveCastTime'] )
         };
 

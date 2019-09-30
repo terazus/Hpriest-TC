@@ -63,10 +63,13 @@
         <div class="spellGraphZone col-lg-8 col-md-9 col-sm-12">
             <div class="container-fluid" ng-if="spell_selected">
                 <div class="row">
+                    <h4> {{spell_selected.name}}</h4>
+                </div>
+                <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 graphContainer"
                          ng-repeat="(spellName, spellVal) in graphs.data">
                         <div class="graph">
-                            <h4>{{spellName}}</h4>
+                            <h5>{{spellName}}</h5>
                             <canvas id="line"
                                     class="chart chart-line"
                                     chart-data="spellVal"

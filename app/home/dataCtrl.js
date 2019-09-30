@@ -69,27 +69,26 @@ define([], function () {
 
         $scope.computeHPM = function(spellPower, spell, rank){
             let rankValue = spell['ranks'][rank];
-            return (rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / rankValue['cost']
+            return Math.round((rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / rankValue['cost']*1000)/1000
         };
 
         $scope.computeHPSM = function(spellPower, spell, rank){
             let rankValue = spell['ranks'][rank];
-            return ((rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / spell['effectiveCastTime'] ) / rankValue['cost']
+            return Math.round(((rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / spell['effectiveCastTime'] ) / rankValue['cost']*1000)/1000
         };
 
         $scope.computeHPS = function(spellPower, spell, rank){
             let rankValue = spell['ranks'][rank];
-            console.log(spell['ranks'][rank]);
-            return ((rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / spell['effectiveCastTime'] )
+            return Math.round(((rankValue['flat'] + (rankValue['effectiveCoefficient'] * spellPower)) / spell['effectiveCastTime'] )*1000)/1000
         };
 
         $scope.computeSpecial = function(spellPower, spell, rank, coefficient) {
             let HPM = $scope.computeHPM(spellPower, spell, rank);
             let HPS = $scope.computeHPS(spellPower, spell, rank);
 
-            return Math.sqrt(HPM*HPS);
+            return Math.round(Math.sqrt(HPM*HPS)*1000)/1000;
 
-            return Math.pow(HPM, coefficient[0]) * Math.pow(Math.log(HPS), coefficient[1]);
+           //return Math.pow(HPM, coefficient[0]) * Math.pow(Math.log(HPS), coefficient[1]);
         }
 
 

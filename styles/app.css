@@ -168,6 +168,11 @@ table .spellIcon{
     max-width: 40px;
 }
 
+table.removeMargin{
+    margin-top:0;
+}
+
+
 .borderLeftCell{
     border-left:1px solid white !important;
 }
@@ -271,6 +276,7 @@ span.label{
     height:100%;
     padding: 20px;
     margin-bottom:20px;
+    margin-top:36px;
 }
 
 .spellSelector .spellIcon{
@@ -289,9 +295,10 @@ label.graphParam{
 
 .graphContainer{
     padding: 10px;
+    margin-bottom:20px;
 }
 
-.graph{
+.graph, .graphContainer{
     border:1px solid #ccc;
     box-shadow: 3px 3px 3px rgba(0,0,0, 0.5);
     padding:20px;

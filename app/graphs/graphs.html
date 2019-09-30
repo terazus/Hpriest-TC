@@ -7,7 +7,7 @@
 
     <div class="row paddedSide" ng-controller="graphsController">
 
-        <div class="spellSelector col-lg-3 col-md-3 col-sm-12">
+        <div class="spellSelector col-lg-4 col-md-3 col-sm-12 sticky-top">
             <div class="">
                 <h5>Select a spell: </h5>
                 <div class="">
@@ -60,13 +60,10 @@
             </div>
         </div>
 
-
-
-
-        <div class="spellGraphZone col-lg-9 col-md-9 col-sm-12">
+        <div class="spellGraphZone col-lg-8 col-md-9 col-sm-12">
             <div class="container-fluid" ng-if="spell_selected">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 graphContainer"
+                    <div class="col-lg-12 col-md-12 col-sm-12 graphContainer"
                          ng-repeat="(spellName, spellVal) in graphs.data">
                         <div class="graph">
                             <h4>{{spellName}}</h4>
@@ -84,7 +81,6 @@
             </div>
 
         </div>
-
 
     </div>
 

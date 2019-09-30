@@ -40,6 +40,9 @@ define([], function () {
                         // Spell Coefficient due to cast time
                         if (spell['castTime'] === 0) {
                             spell['effectiveCastTime'] = 1.5;
+                            if (spell.name === 'Renew'){
+                                spell['effectiveCastTime'] = 15;
+                            }
                         }
                         else{
                             spell['effectiveCastTime'] = spell['castTime'] ;
@@ -83,6 +86,8 @@ define([], function () {
         $scope.computeSpecial = function(spellPower, spell, rank, coefficient) {
             let HPM = $scope.computeHPM(spellPower, spell, rank);
             let HPS = $scope.computeHPS(spellPower, spell, rank);
+
+            return Math.sqrt(HPM*HPS);
 
             return Math.pow(HPM, coefficient[0]) * Math.pow(Math.log(HPS), coefficient[1]);
         }

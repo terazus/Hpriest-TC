@@ -4,7 +4,9 @@ let dependencies = [
     'graphs/graphsCtrl'
 ];
 
-define(dependencies, function (angular, dataCtrl, graphsCtrl) {
+define(dependencies, function (angular,
+                               dataCtrl,
+                               graphsCtrl) {
 
     let app = angular.module("HealerHPM", ['ngRoute', 'chart.js']);
 

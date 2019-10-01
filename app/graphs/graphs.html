@@ -21,6 +21,18 @@
 
                 <hr>
 
+                <div class="">
+                    <h5>Select your talents</h5>
+                    <div class="">
+                        <img  ng-repeat="(talentName, talent) in talents"
+                              ng-if="talent.hasOwnProperty('icon')"
+                              src="{{data['iconLocation']}}{{talent['icon']}}"
+                              class="spellIcon">
+                    </div>
+                </div>
+
+                <hr>
+
                 <div>
                     <h5> Graph options</h5>
                     <label class="graphParam">Min</label>

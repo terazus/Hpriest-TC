@@ -65,6 +65,8 @@ define([], function () {
             }
 
             $scope.data = output;
+
+            $scope.talents = response.data['talents']
         });
 
         $scope.computeHPM = function(spellPower, spell, rank){

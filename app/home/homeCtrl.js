@@ -15,7 +15,5 @@ define(['app'], function (app) {
 
         $scope.spellPower = "1"
 
-
-
     }])
 });

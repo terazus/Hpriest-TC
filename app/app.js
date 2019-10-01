@@ -41,7 +41,9 @@ define(dependencies, function (angular,
                 resolve: resolveController(["HomeController"])
             })
             .when("/graphs", {
-                templateUrl: "app/graphs/graphs.html"
+                templateUrl: "app/graphs/graphs.html",
+                controller: "HomeController",
+                resolve: resolveController(["HomeController"])
             })
             .otherwise({redirectTo: '/'});
     }]);

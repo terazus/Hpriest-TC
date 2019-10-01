@@ -286,7 +286,11 @@ span.label{
 }
 
 .selectedSpell {
-    border:2px solid red;
+    filter: none;
+}
+
+.spellSubSelector img:not(.selectedSpell){
+    filter: grayscale(100%);
 }
 
 label.graphParam{

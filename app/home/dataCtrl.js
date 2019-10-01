@@ -7,7 +7,7 @@ define([], function () {
         };
 
         $scope.current_talents = {};
-        $scope.playerSpirit = 100;
+        $scope.playerSpirit = 0;
 
         /* TRIGGERING QUERY */
 
@@ -116,7 +116,26 @@ define([], function () {
             return Math.round((healDone/computedCast)*1000)/1000
         };
 
-        $scope.computeSpecial = function(spellPower, spell, rank, coefficient) {
+        $scope.compute_all = function(spellPower, spell, rank){
+            let rankValue = spell['ranks'][rank];
+            let healDone = computeHeal(
+                rankValue['flat'],
+                rankValue['effectiveCoefficient'],
+                spellPower,
+                spell.name
+            );
+            let computedCost = computeCost(rankValue['cost'], spell.name);
+            let computedCast = computeCast(spell['effectiveCastTime'], spell.name);
+
+            let HPS = Math.round((healDone/computedCast)*1000)/1000;
+            let HPM = Math.round((healDone/computedCost)*1000)/1000;
+            let HPS_M = Math.round(((healDone / computedCast) / computedCost)*1000)/ 1000;
+            let HES = Math.round(Math.sqrt(HPM*HPS)*1000)/1000;
+
+            return [HPS, HPM, HPS_M, HES];
+        };
+
+        $scope.computeSpecial = function(spellPower, spell, rank) {
             let HPM = $scope.computeHPM(spellPower, spell, rank);
             let HPS = $scope.computeHPS(spellPower, spell, rank);
 

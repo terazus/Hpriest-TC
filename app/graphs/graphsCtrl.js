@@ -69,15 +69,20 @@ define([], function () {
                     if (rankIndex === 1){
                         $scope.graphs.labels.push(i);
                     }
+
+                    let compute_all = $scope.compute_all(i, spell, rankIndex-1);
+
+                    /*
                     let HPS_M = $scope.computeHPSM(i, spell, rankIndex-1);
                     let HPM = $scope.computeHPM(i, spell, rankIndex-1);
                     let HPS = $scope.computeHPS(i, spell, rankIndex-1);
                     let HES = $scope.computeSpecial(i, spell, rankIndex-1, [1, 1]);
+                    */
 
-                    rankHPSM.push(HPS_M);
-                    rankHPM.push(HPM);
-                    rankHPS.push(HPS);
-                    rankHES.push(HES);
+                    rankHPSM.push(compute_all[2]);
+                    rankHPM.push(compute_all[1]);
+                    rankHPS.push(compute_all[0]);
+                    rankHES.push(compute_all[3]);
 
                 }
                 $scope.graphs.data['HPS/M'].push(rankHPSM);

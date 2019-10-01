@@ -387,8 +387,8 @@
   ],
   "talents": {
     "Improved power word shield": {
-      "ranks": 5,
-      "value": 3,
+      "ranks": 3,
+      "value": 5,
       "apply": "heal",
       "description": "Increases the damage absorbed by your Power Word: Shield by %value%",
       "icon": "spell_holy_powerwordshield.jpg",

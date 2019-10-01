@@ -306,6 +306,25 @@ label.graphParam{
 }
 
 
+
+/* TALENT SELECTOR */
+.talent{
+    display: inline-block;
+    position: relative;
+}
+
+.talentCounter {
+    position: absolute;
+    border-radius: 3px;
+    top: 34px;
+    left: 47px;
+    border: 1px solid #ccc;
+    background: black;
+    padding: 0 5px;
+    color: green;
+    font-weight: bolder;
+}
+
 /* FOOTER */
 
 

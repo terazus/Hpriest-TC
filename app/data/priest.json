@@ -387,60 +387,68 @@
   ],
   "talents": {
     "Improved power word shield": {
-      "ranks": 3,
-      "value": 5,
+      "ranks": 5,
+      "value": 3,
       "apply": "heal",
       "description": "Increases the damage absorbed by your Power Word: Shield by %value%",
-      "icon": "spell_holy_powerwordshield.jpg"
+      "icon": "spell_holy_powerwordshield.jpg",
+      "target": ["Power word: Shield"]
     },
     "Mental Agility": {
       "ranks": 5,
       "value": 2,
       "apply": "mana",
       "description": "Reduces the mana cost of your instant cast spells by %value%.",
-      "icon": "ability_hibernation.jpg"
+      "icon": "ability_hibernation.jpg",
+      "target": ["Power word: Shield", "Renew", "Holy Nova"]
     },
     "Improved Renew": {
       "ranks": 3,
       "value": 5,
       "apply": "heal",
       "description": "Increases the amount healed by your Renew spell by %value%.",
-      "icon": "spell_holy_renew.jpg"
+      "icon": "spell_holy_renew.jpg",
+      "target": ["Renew"]
     },
     "Divine Fury": {
-      "ranks": 0.1,
-      "value": 5,
+      "ranks": 5,
+      "value": 0.1,
       "apply": "cast",
       "description": "Reduces the casting time of your Smite, Holy Fire, Heal and Greater Heal spells by %value sec.",
-      "icon": "spell_holy_sealofwrath.jpg"
+      "icon": "spell_holy_sealofwrath.jpg",
+      "target": ["Greater Heal", "Heal"]
     },
     "Improved Prayer of Healing": {
-      "ranks": 2,
-      "value": 5,
+      "ranks": 5,
+      "value": 2,
       "apply": "mana",
       "description": "Reduces the Mana cost of your Prayer of Healing spell by %value%.",
-      "icon": "spell_holy_prayerofhealing02.jpg"
+      "icon": "spell_holy_prayerofhealing02.jpg",
+      "target": ["Prayer of Healing"]
     },
     "Improved Healing": {
-      "ranks": 3,
-      "value": 5,
+      "ranks": 5,
+      "value": 3,
       "apply": "mana",
       "description": "Reduces the Mana cost of your Lesser Heal, Heal, and Greater Heal spells by %value%.",
-      "icon": "spell_holy_heal.jpg"
+      "icon": "spell_holy_heal.jpg",
+      "target": ["Lesser Heal", "Heal", "Greater Heal"]
     },
     "Spiritual Healing": {
-      "ranks": 2,
-      "value": 5,
+      "ranks": 5,
+      "value": 2,
       "apply": "heal",
       "description": "Increases the amount healed by your healing spells by %value%.",
-      "icon": "spell_nature_moonglow.jpg"
+      "icon": "spell_nature_moonglow.jpg",
+      "target": ["Power word: Shield", "Lesser Heal", "Heal", "Greater Heal", "Renew", "Holy Nova", "Flash Heal", "Prayer of Healing"]
     },
     "Spiritual Guidance": {
       "ranks": 5,
-      "value": 5,
+      "value": 2,
       "apply": "special",
       "description": "Increases spell damage and healing by up to %value% of your total Spirit.",
-      "icon": "spell_holy_spiritualguidence.jpg"
+      "icon": "spell_holy_spiritualguidence.jpg",
+      "target": ["Power word: Shield", "Lesser Heal", "Heal", "Greater Heal", "Renew", "Holy Nova", "Flash Heal", "Prayer of Healing"]
     }
   }
 }

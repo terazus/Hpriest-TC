@@ -57,7 +57,6 @@ define([], function () {
             for (let rank of spell['ranks']){
 
                 $scope.graphs.series.push("RANK " + rankIndex);
-
                 let rankHPSM = [];
                 let rankHPM = [];
                 let rankHPS = [];

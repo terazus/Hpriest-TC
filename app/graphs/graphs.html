@@ -8,7 +8,8 @@
     <div class="row paddedSide" ng-controller="graphsController">
 
         <div class="spellSelector col-lg-3 col-md-3 col-sm-12 sticky-top">
-            <div class="">
+
+            <div class="spellSelector">
                 <h5>Select a spell: </h5>
                 <div class="">
                     <img  ng-repeat="spell in data['spells']"
@@ -21,13 +22,15 @@
 
                 <hr>
 
-                <div class="">
+                <div class="talentSelector">
                     <h5>Select your talents</h5>
-                    <div class="">
-                        <img  ng-repeat="(talentName, talent) in talents"
-                              ng-if="talent.hasOwnProperty('icon')"
+                    <div class="talent" ng-repeat="(talentName, talent) in talents">
+                        <img  ng-if="talent.hasOwnProperty('icon')"
                               src="{{data['iconLocation']}}{{talent['icon']}}"
+                              ng-click="increaseTalent(1, talentName)"
+                              ng-right-click="increaseTalent(-1, talentName)"
                               class="spellIcon">
+                        <div class="talentCounter"> {{current_talents[talentName]}} </div>
                     </div>
                 </div>
 

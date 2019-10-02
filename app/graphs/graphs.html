@@ -24,13 +24,27 @@
 
                 <div class="talentSelector">
                     <h5>Select your talents</h5>
+
                     <div class="talent" ng-repeat="(talentName, talent) in talents">
-                        <img  ng-if="talent.hasOwnProperty('icon')"
+                        <img  ng-if="talent.hasOwnProperty('icon') && talentName !== 'Spiritual Guidance'"
                               src="{{data['iconLocation']}}{{talent['icon']}}"
                               ng-click="increaseTalent(1, talentName)"
                               ng-right-click="increaseTalent(-1, talentName)"
+                              ng-class="{'greyImg': talentName === 'Spiritual Guidance'}"
                               class="spellIcon">
+                        <img ng-if="talentName === 'Spiritual Guidance'"
+                             src="{{data['iconLocation']}}{{talent['icon']}}"
+                             ng-click=""
+                             ng-right-click=""
+                             class="spellIcon greyImg">
+                        <i class="fa fa-times notAvailable" ng-if="talentName === 'Spiritual Guidance'">
+                        </i>
                         <div class="talentCounter"> {{current_talents[talentName]}} </div>
+                    </div>
+
+                    <div ng-if="current_talents['Spiritual Guidance'] > 10">
+                        <label>Spirit</label>
+                        <input type="number" ng-model="playerStat.spirit">
                     </div>
                 </div>
 

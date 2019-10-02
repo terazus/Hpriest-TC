@@ -7,7 +7,9 @@ define([], function () {
         };
 
         $scope.current_talents = {};
-        $scope.playerSpirit = 0;
+        $scope.playerStat = {
+            spirit: 0
+        };
 
         /* TRIGGERING QUERY */
 
@@ -130,7 +132,7 @@ define([], function () {
             let HPS = Math.round((healDone/computedCast)*1000)/1000;
             let HPM = Math.round((healDone/computedCost)*1000)/1000;
             let HPS_M = Math.round(((healDone / computedCast) / computedCost)*1000)/ 1000;
-            let HES = Math.round(Math.sqrt(HPM*HPS)*1000)/1000;
+            let HES = Math.round(Math.log(Math.sqrt(HPM*HPS))*1000)/1000;
 
             return [HPS, HPM, HPS_M, HES];
         };
@@ -145,9 +147,9 @@ define([], function () {
         };
 
         let computeHeal = function(flat, coefficient, spellPower, spellName){
-            if ($scope.current_talents['Spiritual Guidance'] > 0){
-                spellPower += ($scope.playerSpirit*$scope.current_talents['Spiritual Guidance']*5)/100;
-            }
+            /*if ($scope.current_talents['Spiritual Guidance'] > 0){
+                spellPower += ($scope.playerStat.spirit*$scope.current_talents['Spiritual Guidance']*5)/100;
+            }*/
 
             let computedValue = flat + (coefficient * spellPower);
             let talentFactor = 0;

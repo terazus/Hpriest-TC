@@ -444,7 +444,7 @@
     },
     "Spiritual Guidance": {
       "ranks": 5,
-      "value": 2,
+      "value": 5,
       "apply": "special",
       "description": "Increases spell damage and healing by up to %value% of your total Spirit.",
       "icon": "spell_holy_spiritualguidence.jpg",

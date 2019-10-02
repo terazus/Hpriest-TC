@@ -289,8 +289,16 @@ span.label{
     filter: none;
 }
 
-.spellSubSelector img:not(.selectedSpell){
+.spellSubSelector img:not(.selectedSpell),
+img.greyImg{
     filter: grayscale(100%);
+}
+
+.notAvailable {
+    font-size: 61px;
+    color: red;
+    position: absolute;
+    left: 16px;
 }
 
 label.graphParam{

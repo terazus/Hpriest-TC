@@ -440,7 +440,7 @@
       "apply": "heal",
       "description": "Increases the amount healed by your healing spells by %value%.",
       "icon": "spell_nature_moonglow.jpg",
-      "target": ["Power word: Shield", "Lesser Heal", "Heal", "Greater Heal", "Renew", "Holy Nova", "Flash Heal", "Prayer of Healing"]
+      "target": ["Lesser Heal", "Heal", "Greater Heal", "Renew", "Holy Nova", "Flash Heal", "Prayer of Healing"]
     },
     "Spiritual Guidance": {
       "ranks": 5,

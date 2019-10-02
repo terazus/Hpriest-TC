@@ -6,7 +6,31 @@ define([], function () {
         $scope.graphParam = {
             min: 0,
             max: 1500,
-            step: 10
+            step: 10,
+            colors: [
+                "#a2b9bc",
+                "#b2ad7f",
+                "#878f99",
+                "#6b5b95",
+                "#feb236",
+                "#d64161",
+                "#ff7b25",
+                "#82b74b",
+                "#034f84",
+                "#b1cbbb"
+            ],
+            offColors: [
+                "#d98880",
+                "#9a7d0a",
+                "#c39bd3",
+                "#0e6251",
+                "#f4d03f",
+                "#78281f",
+                "#7fb3d5",
+                "#154360",
+                "#1abc9c",
+                "#512e5f"
+            ]
         };
 
         // Setting X labels

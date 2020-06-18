@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "*",
-    "angular": "1.7.9",
+    "angular": "1.8.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "angular-route": "1.7.8",
